@@ -1,0 +1,9 @@
+{
+  "what": "ShipSense evidence_audit_chain head anchor. Hashes only — contains no shipment or personal data.",
+  "anchored_at": "2026-08-16T03:00:02.444Z",
+  "head_row_id": 697,
+  "head_row_hash": "a8ccbb6e2fc10ad28096df5c300812e53a9742f4094ecd861efde529dbe7ef05",
+  "rows_in_chain": 697,
+  "prev_anchor_ref": "e9af93bbae492358a49cfdf981775c0a862330c0",
+  "generator": "anchor-chain-head@v2"
+}
