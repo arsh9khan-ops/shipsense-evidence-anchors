@@ -1,0 +1,18 @@
+{
+  "schema_version": 3,
+  "what": "ShipSense evidence_audit_chain head anchor. Hashes and counts only — contains no shipment, merchant, courier or personal data.",
+  "anchored_at": "2026-08-16T14:34:34.049Z",
+  "head_row_id": 697,
+  "head_row_hash": "a8ccbb6e2fc10ad28096df5c300812e53a9742f4094ecd861efde529dbe7ef05",
+  "chain_row_count": 79,
+  "chain_digest": "21509a0820fe1c2328ce29cf52f80ac5620fa451853f1a5c927d56fede1441a9",
+  "chain_digest_method": "sha256(row_hash joined by '|' in ascending id order)",
+  "segment_verified_from_row_id": 697,
+  "segment_rows_verified": 1,
+  "prev_anchor_ref": "ba3335cf35862093ee0d1883685f692dc1fd4fa5",
+  "generator": "anchor-chain-head@v3",
+  "notes": [
+    "Row ids are a sparse Postgres sequence: head_row_id >= chain_row_count always. A gap in ids is not a missing row.",
+    "schema_version 2 files (2026-07-15 to 2026-08-16) carry a field named rows_in_chain that actually holds head_row_id, not a count. See SCHEMA.md. Those files are left in place unedited."
+  ]
+}
