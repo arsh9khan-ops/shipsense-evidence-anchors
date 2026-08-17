@@ -18,6 +18,8 @@ Everything in schema_version 3, plus:
 | `commitment_log.head_entry_hash` | `entry_hash` of that entry |
 | `commitment_log.row_count` | exact `count(*)` of commitment_log |
 | `commitment_log.digest` | `sha256` of every `entry_hash` joined by `|` in ascending `seq` order |
+| `merkle.tree_size` | leaves in the Merkle tree over evidence_audit_chain (from 17 Aug 2026) |
+| `merkle.root_hash` | RFC-6962-style root: leaf sha256(0x00||bytes(row_hash)), node sha256(0x01||L||R), odd node promoted |
 
 Beside each anchor file, a `<anchor>.proofs.json` file may carry external timestamp
 proofs of the anchor file itself:
@@ -59,6 +61,8 @@ the chain held 79 rows spanning ids 1 to 697. **A gap in ids is not a missing ro
 5. Confirm the file's git commit predates the date on which the evidence was disputed.
 6. (v4) Recompute sha256 of the anchor file and check it against the OpenTimestamps and
    RFC-3161 proofs in `<anchor>.proofs.json` — timestamps no ShipSense account controls.
+7. (v4.1) For a single chain row, ask ShipSense for its Merkle inclusion proof and fold it
+   from the leaf up — it must reproduce `merkle.root_hash` in this file.
 
 ## CORRECTION — schema_version 2 (anchors of 2026-07-15 to 2026-08-16, ids 1..22)
 
