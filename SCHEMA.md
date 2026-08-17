@@ -1,11 +1,36 @@
 # ShipSense evidence anchor log — field schema and corrections
 
-This repository is an append-only, third-party-hosted log of the head of ShipSense's
-`evidence_audit_chain`. It contains cryptographic hashes and counts only. It contains no
-shipment, merchant, courier or consignee data, and never has.
+This repository is an append-only, third-party-hosted log of the heads of ShipSense's
+`evidence_audit_chain` and (from schema_version 4) `commitment_log`. It contains
+cryptographic hashes and counts only. It contains no shipment, merchant, courier or
+consignee data, and never has.
 
 Nothing in this repository is ever deleted or rewritten, including the entries corrected below.
 A log that edits its own history proves nothing.
+
+## schema_version 4 — from 2026-08-17
+
+Everything in schema_version 3, plus:
+
+| field | meaning |
+|---|---|
+| `commitment_log.head_seq` | newest seq in ShipSense's commitment_log at that instant |
+| `commitment_log.head_entry_hash` | `entry_hash` of that entry |
+| `commitment_log.row_count` | exact `count(*)` of commitment_log |
+| `commitment_log.digest` | `sha256` of every `entry_hash` joined by `|` in ascending `seq` order |
+
+Beside each anchor file, a `<anchor>.proofs.json` file may carry external timestamp
+proofs of the anchor file itself:
+
+| field | meaning |
+|---|---|
+| `anchor_file_sha256` | sha256 of the exact bytes of the anchor .json file |
+| `opentimestamps[]` | per-calendar pending attestations (base64). Complete after Bitcoin confirmation via the `ots` client (upgrade against the same calendar). |
+| `rfc3161` | TimeStampResp (base64, DER) from the named TSA. Verify: `openssl ts -verify`. |
+
+Why: the GitHub commit clock is controlled by ShipSense's own account. The
+OpenTimestamps attestation (Bitcoin) and the RFC-3161 token are clocks nobody here
+controls. Together, one artefact carries three independent timestamps.
 
 ## schema_version 3 — from 2026-08-16
 
@@ -32,6 +57,8 @@ the chain held 79 rows spanning ids 1 to 697. **A gap in ids is not a missing ro
 3. Recompute each row: `sha256(prev_hash | payload_sha256 | dispute_id | hash_input_ts)`.
 4. Recompute `chain_digest` and compare it to the value in the anchor file for that date.
 5. Confirm the file's git commit predates the date on which the evidence was disputed.
+6. (v4) Recompute sha256 of the anchor file and check it against the OpenTimestamps and
+   RFC-3161 proofs in `<anchor>.proofs.json` — timestamps no ShipSense account controls.
 
 ## CORRECTION — schema_version 2 (anchors of 2026-07-15 to 2026-08-16, ids 1..22)
 
