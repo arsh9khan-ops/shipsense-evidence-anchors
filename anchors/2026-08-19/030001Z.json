@@ -1,0 +1,34 @@
+{
+  "schema_version": 4,
+  "what": "ShipSense evidence_audit_chain + commitment_log head anchor. Hashes and counts only — contains no shipment, merchant, courier or personal data.",
+  "anchored_at": "2026-08-19T03:00:01.844Z",
+  "head_row_id": 1376,
+  "head_row_hash": "863ff6d7fd9adf98467db541424da403d0688bbfb65e07bb515aebea0effb43a",
+  "chain_row_count": 124,
+  "chain_digest": "558845399303b468b84f1867db91369ad199d0f4b7b3390415a5d6c3409cab4c",
+  "chain_digest_method": "sha256(row_hash joined by '|' in ascending id order)",
+  "commitment_log": {
+    "head_seq": 6,
+    "head_entry_hash": "55ebd8ea8e26d2e0b375041c3637e27dc4c4450f9b30ca1c74d08e45e8e45232",
+    "row_count": 6,
+    "digest": "a9ec23ae7f800fff19e119cccab38688fc3481f181f26c4154fd021fdc21aab9",
+    "digest_method": "sha256(entry_hash joined by '|' in ascending seq order)"
+  },
+  "merkle": {
+    "tree_size": 124,
+    "root_hash": "de8075a5c0d1cb5a09fa968e4f59a44267326ef4a744f6b10b7aedff15ed3092",
+    "computed_at": "2026-08-19T03:00:00.120262+00:00",
+    "leaf_recipe": "sha256(0x00 || bytes_of(row_hash))",
+    "node_recipe": "sha256(0x01 || left || right); odd last node promoted",
+    "note": "Single-row inclusion proofs are served on request and verify against this root in O(log n)."
+  },
+  "segment_verified_from_row_id": 1057,
+  "segment_rows_verified": 43,
+  "prev_anchor_ref": "eaf51664d3e89b4b5ec6d2ffc1bda9f5767cb82f",
+  "generator": "anchor-chain-head@v4.1",
+  "notes": [
+    "Row ids are a sparse Postgres sequence: head_row_id >= chain_row_count always. A gap in ids is not a missing row.",
+    "schema_version 2 files (2026-07-15 to 2026-08-16) carry a field named rows_in_chain that actually holds head_row_id, not a count. See SCHEMA.md. Those files are left in place unedited.",
+    "From schema_version 4 a <anchor>.proofs.json beside this file may carry OpenTimestamps and RFC-3161 timestamps of this file's exact bytes. See SCHEMA.md."
+  ]
+}
