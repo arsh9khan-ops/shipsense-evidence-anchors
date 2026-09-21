@@ -8,6 +8,23 @@ consignee data, and never has.
 Nothing in this repository is ever deleted or rewritten, including the entries corrected below.
 A log that edits its own history proves nothing.
 
+## proof_schema_version 5 — proofs files from 2026-09-21
+
+The anchor files are unchanged (schema_version 4). Each `<anchor>.proofs.json` gains:
+
+| field | meaning |
+|---|---|
+| `proof_schema_version` | 5 |
+| `timestamp_authorities[]` | every RFC-3161 authority asked: `tsa_url`, `label`, `status`, `pki_status`, `token_present`, `imprint_matches`, and the TimeStampResp (`tsr_b64`, base64 DER) whenever one arrived. `status` is `granted` only when the PKIStatus is 0 or 1 AND a signed token is present AND that token carries this file's sha256; otherwise it names what was missing (`rejected`, `waiting`, `no_token`, `imprint_mismatch`, `malformed`, `http_<n>`, `timeout`). From 2026-09-21 the authorities are freetsa.org and DigiCert, a CA-audited authority. |
+| `rfc3161` | kept for schema-4 readers: the first granted authority's response |
+| `opentimestamps[].pending_uri` | the calendar that will answer for that pending attestation |
+| `witness_source` | `anchor_witnesses` (the configured list) or `fallback_defaults` (the list could not be read) |
+| `anchor_document` | present only when the anchor file could not be published: the exact bytes the witnesses stamped |
+
+**Before 2026-09-21 an RFC-3161 answer was recorded as `ok` on HTTP 200 alone; its PKIStatus
+was not read.** A timestamp authority can answer HTTP 200 with a rejection and no token. Verify
+any `rfc3161` proof yourself with `openssl ts -verify` rather than trusting its `status`.
+
 ## schema_version 4 — from 2026-08-17
 
 Everything in schema_version 3, plus:
