@@ -1,0 +1,75 @@
+{
+  "what": "Upgraded OpenTimestamps proofs for the anchor file beside this one (ots-upgrade v5). Each calendar's proof_b64 is its best proof so far; pending_proof_b64, where present, is that calendar's original pending reply, kept. A Bitcoin block attestation names its height and the block's merkle root as explorers print it. See SCHEMA.md.",
+  "generator": "ots-upgrade@v5",
+  "anchor_file": "183002Z.json",
+  "anchor_file_sha256": "80d2c203176a2c77768ce379329005af92cbd2ca69efd490e611230be4b0d7de",
+  "opentimestamps": [
+    {
+      "label": "OpenTimestamps pool A",
+      "status": "bitcoin_attested",
+      "attempts": 1,
+      "calendar": "https://a.pool.opentimestamps.org",
+      "proof_b64": "8AiEuU9jaYAVsgjwEPI/UG1b7BU1FJB29nbt9TMI8CDI/KnzCfI+7X6B9OK/r7xnw3JdMuvn7CfcNnZo9O7/VQjxILqVLvjar8rjbLTxznW/wsxIUIL2tb76fGmRmVUjp9WUCPAguQ76gm8OpOIVruMIpSv9E/jI0952BY3uIKjA+Br4IyII8QRqsXes8AjHYi4MSVZrwv8Ag9/jDS75DI4uLWh0dHBzOi8vYWxpY2UuYnRjLmNhbGVuZGFyLm9wZW50aW1lc3RhbXBzLm9yZwjwIIJtpicC/xwC56wji+uwtvmMItIAgIQukANwgyhQN4VWCPEggUuJx+Sg90BH1cVsI6jvs2Zszk8iwA+j4q3RnLoDxEAI8SCe4zgU+wQ8xtulUV0dCOMBIeqZRosEMDi7uuTihMCujQjwII3BRzghpi+TcRPz82aL+gqxdxKYRJsebeUoW4XBK+E1CPAgw49hOghSbMc3SpcunlLURFmXdhacDsvH0vdckjdwSKgI8SCDWs3ydcEOXzQK7EwKMRtufG7rDXWJvHNeVVcV0HvmgwjwIKu3BXFqe1ki6Ry1fqDAXl2VTnOdBK+OnHl2N3lerXI6CPEgdeeFqZYDGupDKnTChemogpKtLpj5zvlcpW/FT1iMO+kI8SB06zM5U1YjXJ8Ei0KxXa+wP08jmYzWqxVSn30eiHBHuAjwIE35W3aQithGu3k7w3asU5/A0mV8b44qw0yWLkjKXhcICPAgpBvnuuirG+FP5fjl8BwdNCQ5SczRfBSUdCSKSxOEeNsI8SCu75UkdOZ+XLoo0p+mRUZTxP4759BAyD0X9gxY9vZffgjxIK+b0V5MCLpJSqsMFcWBIYqmU63onbrMYJnqVGSAoMnbCPFZAQAAAAGyJbsdnMXudfOr+TK0YNN8Ifwx4J4s4jL4X4urNxSAiAAAAAAA/v///wK+3gEAAAAAABYAFAMdtrmkILNslCK/Dx6TI4AlS0L8AAAAAAAAAAAiaiDwBF3FDgAICPAgB/2RlnZcrlMYQ1XMmeEGKnm4kZodDjPr7rpSjIEOuuAICPEgbm9nEU5+M8Ip0XSiX5yFB6Fl2HbY50SSR9DhJLKlloQICPEg05z2faSRq4aPESeX5gGtOPxVE6JN5AexkJyz9k/RSJ4ICPEgdb4iGMlHIW8JcKb70mE2kja/xI4tM3CWSnfQqDzwyX8ICPEg01CGg6v4lwXJd9PXEErD2amnUHyvnNgfvCul8zh0buMICPAg1vGgpOaNRX4DUa26GnT9fUYIc63NuXewFsctzQXSwQsICPAgFZa8pX23frEQPxi8DT2suG3pXfm+o/08dRZxGlq0QFoICPAg4zk2fdekJCboINIhLNzlBrOEnMmvjs+KKA9yejifT5QICPEg2J0aahj8ZZn4QMLT+bHR2R5VHZdTg90EX0E561/ILmAICPAgxaKbdDQYFUcmJciog2okv9KiY4WKSJKKY+eoveQiqwgICPAg5S2KePppdE/XtHXiQQpln8qC24bKs97C8PdmsvEM/tUICPAgRtHIsWeazyKuJKcX4yE9q/7orQkVOeDlFKAfTtzSUigICAAFiJYNc9cZAQPeijs=",
+      "last_result": "attested: grafted",
+      "pending_uri": "https://alice.btc.calendar.opentimestamps.org",
+      "upgraded_at": "2026-09-21T20:07:01.068Z",
+      "last_attempt_at": "2026-09-21T20:07:01.068Z",
+      "next_attempt_at": null,
+      "pending_proof_b64": "8AiEuU9jaYAVsgjwEPI/UG1b7BU1FJB29nbt9TMI8CDI/KnzCfI+7X6B9OK/r7xnw3JdMuvn7CfcNnZo9O7/VQjxILqVLvjar8rjbLTxznW/wsxIUIL2tb76fGmRmVUjp9WUCPAguQ76gm8OpOIVruMIpSv9E/jI0952BY3uIKjA+Br4IyII8QRqsXes8AjHYi4MSVZrwgCD3+MNLvkMji4taHR0cHM6Ly9hbGljZS5idGMuY2FsZW5kYXIub3BlbnRpbWVzdGFtcHMub3Jn",
+      "consecutive_errors": 0,
+      "bitcoin_attestations": [
+        {
+          "height": 968030,
+          "block_merkle_root": "b268f36eb0c14cd1324cf2b241947ef2740b8dd5123fffffa2faf5dcaf405345"
+        }
+      ],
+      "bitcoin_block_height": 968030
+    },
+    {
+      "label": "OpenTimestamps pool B",
+      "status": "bitcoin_attested",
+      "attempts": 1,
+      "calendar": "https://b.pool.opentimestamps.org",
+      "proof_b64": "8AgeNePL9VROMQjxIAYCEqc7p5J5l99lvmvCB74+yTaGbctwGSek1de6nfQcCPAgTMpE9YvJu/ruQW2PGLqqSm2hcedtrIq++BC2ybtZqwYI8BBrWr4J3OwTCKX2VfRW4P66CPAg0BHg3jBt1ACupTi/IMdDTjRJGlX33WbehtwHn2EqZ4II8CBK+NpYqk54X4pa5vYluWDPFFHPfkFhV/pDb1hT8qx5QgjwINg39wk7J7Ih22hY7f1y2XuIqx9pvApOb1DyIZFmQtU2CPEEarF3rPAIk25lxz4mxFT/AIPf4w0u+QyOLCtodHRwczovL2JvYi5idGMuY2FsZW5kYXIub3BlbnRpbWVzdGFtcHMub3JnCPEgNFd2RLSSGa3VEjbcmov9zLRoNStSjFWoC3C18R5iPNgI8CDkwRewR03O6+iD6FzdAGrcUPzTX7CrgLmWNjzhfj1IXQjwIG+dWJMjLqUhMB6u9C+P1Js004dUvDAKMryi4d9EQlGtCPAg1+9+TVxpA0FhoqZUILUwjFKF3zxgEtsp08/+CdLorU4I8CBOpxsoZnMxcaWOC3QMtMUGo/elHa4in5hfSg9GYHU9DQjwIPfOlXKCn1Pz+XC5EFVJH2B2NJgUgvJOimBdWiWAk1iNCPEgy62lEayzDF8LwRKm6Gq6gbgIsllkPE8dkfXXXgjQvxwI8CB7RNlvub+WVSJi6ActcgkVHuCuyeotWgOFzsMUiQYbDQjxIP3L4yghCan+KCJMZamk6Aq8yAJQsOyAY9aHzNlrM+ppCPAg5n/Z+S0rSTJN8KnfDV+cdIE6+cDWKR+Q7ej2oGkJBX0I8SDjHOgriDeOM9/QiC9RbL85cBvtXF3X6Ow80zZ0tO/0TgjwICNONOEFXiOXoVVxU1U1eyMZJ7PO8z758TPI76nIWO0oCPEg/eTTC5fKR+hB4N1FGB98qqzdyAUxhQb6s020DlbNQ9kI8VkBAAAAAUpmVGrOPXvpeJ+tYfvxGQoY+4M9UAKn89l1mOyNJod/AAAAAAD+////AhJFAAAAAAAAFgAUjOx7m09BsFKp7gqxFBvrlfZJWlgAAAAAAAAAACJqIPAEXsUOAAgI8SBZVqDM1/JFbCUrHiZc7uYoYvFQaMlXZxr5UJt0CA5WYggI8SA5S4/Jz2WjcYM9DAqyeJ6VxiAKqAs/HVvn/bNNN/TFOQgI8SARLM1QxA+O1K8/pQ9CkcSqAisIk9awxOykm+EEiAc9GwgI8SANaVCu7LeBDf73lJHnecKzMwvC5jZGB/VIJw7NvSRHTggI8SAYZZKwkLDddL7pQFcTOq8O6fyN6NB1THGKlS+JoIRFUwgI8SBtZ81KVDDuGeyqmf6P/lap0bV8m6ta33whfJsiJL2n5wgI8SAub7qQIu5ODQgUSs7dS2CXiUEn9ugQtBWqF30knGF6owgI8CBkHAcHdzt1rYkOJWSSiIcP0uo1JcBeRvwjHcjYytUXqggI8CD7DvdmZ+jHPlHrdno0lPUFpZ5C+WMnTwrZt0wfY0JRjAgI8CDQAEmeL4H+8kLmI2C44hA5WGMF0x083m7oZmF7l2DAZQgI8CCvw7BkvijKZaylsUJ6VpPQve43OO8RBceZJnb2eWU0tQgI8SDW70sCm84pSchT+ezfVJLXorA8uqk1eBWvSrDYdm5YFggIAAWIlg1z1xkBA9+KOw==",
+      "last_result": "attested: grafted",
+      "pending_uri": "https://bob.btc.calendar.opentimestamps.org",
+      "upgraded_at": "2026-09-21T20:07:01.068Z",
+      "last_attempt_at": "2026-09-21T20:07:01.068Z",
+      "next_attempt_at": null,
+      "pending_proof_b64": "8AgeNePL9VROMQjxIAYCEqc7p5J5l99lvmvCB74+yTaGbctwGSek1de6nfQcCPAgTMpE9YvJu/ruQW2PGLqqSm2hcedtrIq++BC2ybtZqwYI8BBrWr4J3OwTCKX2VfRW4P66CPAg0BHg3jBt1ACupTi/IMdDTjRJGlX33WbehtwHn2EqZ4II8CBK+NpYqk54X4pa5vYluWDPFFHPfkFhV/pDb1hT8qx5QgjwINg39wk7J7Ih22hY7f1y2XuIqx9pvApOb1DyIZFmQtU2CPEEarF3rPAIk25lxz4mxFQAg9/jDS75DI4sK2h0dHBzOi8vYm9iLmJ0Yy5jYWxlbmRhci5vcGVudGltZXN0YW1wcy5vcmc=",
+      "consecutive_errors": 0,
+      "bitcoin_attestations": [
+        {
+          "height": 968031,
+          "block_merkle_root": "64bb55bce11f27a94d97df83c04c802b13fd38325c59a443e845c6a42705aff1"
+        }
+      ],
+      "bitcoin_block_height": 968031
+    },
+    {
+      "label": "Eternity Wall Finney",
+      "status": "bitcoin_attested",
+      "attempts": 2,
+      "calendar": "https://finney.calendar.eternitywall.com",
+      "proof_b64": "8BBJC4quKuf8fIAaZ4mDEckfCPAgtHtZEgUkWV/Z5ZJqyDj6MKa6oXs5vomWgW98VEDqNz8I8SAjNOyRJrIKvfYAU5hTK01gYagHDBj5OqLXEPxeFkPAzAjwIFCWHPszyZXj0LrlXm+M85USurphBCtFeOLZz90GflTjCPAgz06I3hHzPWsgyO616kNpKnL+xWhsY0O/07btz4e3+aoI8QRqsXes8Age8z2FtJm1Sv8Ag9/jDS75DI4pKGh0dHBzOi8vZmlubmV5LmNhbGVuZGFyLmV0ZXJuaXR5d2FsbC5jb20I8SAq3/EJjHSLF2q8TIno1/rG6bo5zjK6O4z5cOtnolxFoQjxIJz4AaYz0uzspM0BnD6RB3vctlxfuTu0+wvOfjIt4xDCCPAgFoyvV2MHp2ig09WUV3CtqyGvDfGyHDtGzDypeT42UwsI8CBCP1jx2W2fX4/l3m/Z/wxVQWfIuSvtQma+/YRvkZwliAjxIAbnUITYyb1ZtPL0y7Q7lHTG41RJhcUSqggdPPDy+WV0CPAgsQk3ya+aZRdP/kGEkBF7erdq7IVVKAUdnNP4IgrR8UUI8CB3pJqwL75Bgo+yEiTmEng1kYLULBp2Mgznc0k3/QlBTQjxIGM7gT6bLN7XptcZtMhYUF4cIBC3aq+fgSeFLFQ4IEFCCPEgAKCOowcT8SC/1sy6ExuVY9bvdF7NpTzVXoUlME5ufTsI8SAYm27bAK0ma9DKd7FtK1C8f1HA6O56LXoej4sQCcvS7wjwIMrW7R3ME4P3pBPH1JEeRuk1WWsErymSdcKiCwhPvGU9CPAg5sgXpe/9XuHYPTZWbN8dWiuZg6EqsPYNHAfoXnAbL5kI8CATnkLsEGQ27evZG7aoAKziMZhdVeWo6pRLV0lRv8tc+AjxIHX+UjdkiDL8VjOCb5olNXxQ416yD7SFAx0fsWQQ+YbMCPFZAQAAAAGRwE98BIe4uu9YsVdEgpr7WE5RyAZAyP/885KTr4qvUAAAAAAA/v///wJtMQIAAAAAABYAFLbpcr+sqfcsDKIKCVgOq5y+aYdHAAAAAAAAAAAiaiDwBGfFDgAICPAgoBM6aUnffWs+1+A/7Cv/fOcQ9ghk3VIYNO/n/E4ueRMICPAgrloCJIT2WJkjVi8a+lti/oKBTR5c9gjX2LCCFDIwewcICPAgRn215Bs6vpLJ55+XdrkBsb0TEg3pR+IT7zDS3/WkCjgICPAgVzzxnaqe3tIDElayaiDAD8hCwTT80dd9rXcrHyQKfoUICPAg8ELY7X4QCaFY1ipSDEkWlAu3Nm4p/GiAjuuELLFcBBMICPAg390d6VrSiSBsKXO4W64J0pEIJGvn/bzBRPsyJ2MjwGoICPEgzXtompeBO//COkB4aEZ6sy1eDRSAN75kdoEJS3vKHQIICPAgojf3IAp0WmW7o1yCqxLI09Ay4n5mhcZkStMidYSRRMUICPEgxUwVAfIS4ihLhGHYIFNlbCLaCtvGO5u5bZ2r6AoPQ7MICPAg6OM+TLuB1vCYoBSNL2/ZG3GXMN3pnPqMCS52dy1Ve4IICPAg6YHf5/YoZnW4n1Pl0YaL39BIHb3eW+RXAwI/Nc8FPzAICPAg2rJzSVMKZim/dfz+Mr0ZDtQj86yh+E8Avc4rJys5cpkICAAFiJYNc9cZAQPoijs=",
+      "last_result": "attested: grafted",
+      "pending_uri": "https://finney.calendar.eternitywall.com",
+      "last_attempt_at": "2026-09-22T00:07:01.023Z",
+      "next_attempt_at": null,
+      "consecutive_errors": 0,
+      "pending_proof_b64": "8BBJC4quKuf8fIAaZ4mDEckfCPAgtHtZEgUkWV/Z5ZJqyDj6MKa6oXs5vomWgW98VEDqNz8I8SAjNOyRJrIKvfYAU5hTK01gYagHDBj5OqLXEPxeFkPAzAjwIFCWHPszyZXj0LrlXm+M85USurphBCtFeOLZz90GflTjCPAgz06I3hHzPWsgyO616kNpKnL+xWhsY0O/07btz4e3+aoI8QRqsXes8Age8z2FtJm1SgCD3+MNLvkMjikoaHR0cHM6Ly9maW5uZXkuY2FsZW5kYXIuZXRlcm5pdHl3YWxsLmNvbQ==",
+      "upgraded_at": "2026-09-22T00:07:01.023Z",
+      "bitcoin_block_height": 968040,
+      "bitcoin_attestations": [
+        {
+          "height": 968040,
+          "block_merkle_root": "796c32814dac6a989d365cf6426d5313506dd3f81326fd271193eaf8b4e5c35e"
+        }
+      ]
+    }
+  ],
+  "bitcoin_block_height": 968030,
+  "ots_file": "anchors/2026-09-21/183002Z.json.ots",
+  "how_to_verify": "Download the anchor .json and the .json.ots beside it and run `ots verify <anchor>.json.ots` (opentimestamps-client). Without the .ots file: rebuild it for any one calendar as 004f70656e54696d657374616d7073000050726f6f6600bf89e2e884e89294 || 01 || 08 || <anchor_file_sha256 bytes> || <base64-decoded proof_b64>.",
+  "upgraded_at": "2026-09-22T00:07:01.023Z"
+}
