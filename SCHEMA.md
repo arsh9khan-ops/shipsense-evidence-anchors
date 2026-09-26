@@ -68,9 +68,9 @@ Everything in schema_version 3, plus:
 | `commitment_log.head_seq` | newest seq in ShipSense's commitment_log at that instant |
 | `commitment_log.head_entry_hash` | `entry_hash` of that entry |
 | `commitment_log.row_count` | exact `count(*)` of commitment_log |
-| `commitment_log.digest` | `sha256` of every `entry_hash` joined by `|` in ascending `seq` order |
+| `commitment_log.digest` | `sha256` of every `entry_hash` joined by `\|` in ascending `seq` order |
 | `merkle.tree_size` | leaves in the Merkle tree over evidence_audit_chain (from 17 Aug 2026) |
-| `merkle.root_hash` | RFC-6962-style root: leaf sha256(0x00||bytes(row_hash)), node sha256(0x01||L||R), odd node promoted |
+| `merkle.root_hash` | RFC-6962-style root: leaf sha256(0x00\|\|bytes(row_hash)), node sha256(0x01\|\|L\|\|R), odd node promoted |
 
 Beside each anchor file, a `<anchor>.proofs.json` file may carry external timestamp
 proofs of the anchor file itself:
@@ -94,7 +94,7 @@ controls. Together, one artefact carries three independent timestamps.
 | `head_row_id` | primary key of the newest row in the chain at that instant |
 | `head_row_hash` | `row_hash` of that row |
 | `chain_row_count` | exact `count(*)` of rows in the chain at that instant |
-| `chain_digest` | `sha256` of every `row_hash` joined by `|` in ascending `id` order |
+| `chain_digest` | `sha256` of every `row_hash` joined by `\|` in ascending `id` order |
 | `segment_verified_from_row_id` | first row id re-verified on this run |
 | `segment_rows_verified` | rows re-verified on this run (linkage + hash recompute) |
 | `prev_anchor_ref` | git commit SHA of the previous anchor, chaining the log itself |
