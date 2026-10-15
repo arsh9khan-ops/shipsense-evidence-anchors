@@ -1,0 +1,35 @@
+{
+  "schema_version": 4,
+  "what": "ShipSense evidence_audit_chain + commitment_log head anchor. Hashes and counts only — contains no shipment, merchant, courier or personal data.",
+  "anchored_at": "2026-10-15T10:30:09.593Z",
+  "head_row_id": 966292,
+  "head_row_hash": "b5d2f6e0586f0a8146c6e9d10ce8ed4956bb6ce2a71bc85c106a5fd90375d88b",
+  "chain_row_count": 12419,
+  "chain_digest": "3b687d66705ec0db745f30beee8d5a8521fdde6afa9e4ee849691a450a78a1b5",
+  "chain_digest_method": "sha256(row_hash joined by '|' in ascending id order)",
+  "commitment_log": {
+    "head_seq": 252,
+    "head_entry_hash": "be6ca68815e6a1c5dfd388736c3fe0bccba63135c2457a5741d405b616827a3d",
+    "row_count": 252,
+    "digest": "c7d3571a187822918c4f9154f600ca195585e15f73189414a8efe742fdf329e4",
+    "digest_method": "sha256(entry_hash joined by '|' in ascending seq order)"
+  },
+  "merkle": {
+    "tree_size": 12419,
+    "root_hash": "1f4bb590b81fad0a02b927551cb067f17d65b268f3e1543817e54e455158e7ac",
+    "computed_at": "2026-10-15T10:30:00.085251+00:00",
+    "leaf_recipe": "sha256(0x00 || bytes_of(row_hash))",
+    "node_recipe": "sha256(0x01 || left || right); odd last node promoted",
+    "note": "Single-row inclusion proofs are served on request and verify against this root in O(log n)."
+  },
+  "segment_verified_from_row_id": 965534,
+  "segment_rows_verified": 25,
+  "prev_anchor_ref": "21e689f3b8e0e1f5c63c2c629ce7cc08957a08c7",
+  "generator": "anchor-chain-head@v5",
+  "notes": [
+    "Row ids are a sparse Postgres sequence: head_row_id >= chain_row_count always. A gap in ids is not a missing row.",
+    "schema_version 2 files (2026-07-15 to 2026-08-16) carry a field named rows_in_chain that actually holds head_row_id, not a count. See SCHEMA.md. Those files are left in place unedited.",
+    "From schema_version 4 a <anchor>.proofs.json beside this file may carry OpenTimestamps and RFC-3161 timestamps of this file's exact bytes. See SCHEMA.md.",
+    "From 2026-09-21 (proof_schema_version 5) every RFC-3161 authority asked is recorded, each read to its PKIStatus. See SCHEMA.md."
+  ]
+}
